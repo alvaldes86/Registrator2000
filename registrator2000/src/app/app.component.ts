@@ -1,13 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { RegistrationServiceService } from './services/registration-service.service';
+import { RegistrationService } from './services/registration.service';
 import { CommonModule } from '@angular/common';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, RouterLink],
+  imports: [RouterOutlet, CommonModule, RouterLink, NavbarComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
 
@@ -17,7 +18,7 @@ export class AppComponent {
   loading = true;      // simple loading flag
   error: string | null = null;
 
-  private registrationService = inject(RegistrationServiceService);
+  private registrationService = inject(RegistrationService);
 
   ngOnInit(): void {
     // Call the service and log the result

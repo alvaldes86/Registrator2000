@@ -5,8 +5,11 @@ import { RouterModule, RouterLink } from '@angular/router';
   selector: 'app-navbar',
   imports: [RouterLink],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-
+// navigate(page: string) {
+//     this.router.navigate([page]);
+//     document.title = `Angular App - ${page.charAt(0).toUpperCase()}${page.slice(1)}`;
+//   }
 }
