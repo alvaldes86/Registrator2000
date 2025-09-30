@@ -14,6 +14,7 @@ ul, li{
   bottom: 0;
   left: 0;
   z-index: 1000;
+  padding: 1.4rem 0 !important;
  }
 
 .navbar-brand {
