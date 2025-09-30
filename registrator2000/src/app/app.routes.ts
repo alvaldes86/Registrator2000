@@ -4,5 +4,5 @@ import { UserLoginComponent } from './pages/user-login/user-login.component';
 
 export const routes: Routes = [
   { path: '', component: DashboardComponent, pathMatch: 'full' },
-  { path: 'login', component: UserLoginComponent }
+  { path: 'account', component: UserLoginComponent }
 ];

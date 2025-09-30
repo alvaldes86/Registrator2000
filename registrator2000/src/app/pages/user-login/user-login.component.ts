@@ -1,33 +1,39 @@
 import { Component, inject } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
-import { AuthService} from '../../services/auth-service.service';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-user-login',
-  imports: [],
+  imports: [CommonModule, FormsModule],
   templateUrl: './user-login.component.html',
-  styleUrl: './user-login.component.css'
+  styleUrls: ['./user-login.component.css']
 })
 export class UserLoginComponent {
-  private fb = inject(FormBuilder);
-  private authService = inject(AuthService);
+   email: string = '';
+  password: string = '';
+  rememberMe: boolean = false;
 
-  //Use this in the template [formGroup]="loginForm"
-  loginForm = this.fb.group({
-    email: ['', [Validators.required, Validators.email]],
-    password: ['', Validators.required],
-  });
+  loginWithEmail() {
+    console.log('Email login:', {
+      email: this.email,
+      password: this.password,
+      rememberMe: this.rememberMe
+    });
+    // Implement your email login logic here
+  }
 
-  onSubmit() {
-    if (this.loginForm.valid) {
-      this.authService.login(this.loginForm.value).subscribe({
-        next: (res) => {
-          console.log('Login success!', res);
-        },
-        error: (err) => {
-          console.error('Login failed', err);
-        }
-      });
-    }
+  loginWithGoogle() {
+    console.log('Google login initiated');
+    // Implement your Google OAuth logic here
+  }
+
+  loginWithFacebook() {
+    console.log('Facebook login initiated');
+    // Implement your Facebook OAuth logic here
+  }
+
+  loginWithX() {
+    console.log('X (Twitter) login initiated');
+    // Implement your X OAuth logic here
   }
 }
