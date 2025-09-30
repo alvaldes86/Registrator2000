@@ -1,0 +1,17 @@
+/* Default = mobile */
+#mobile-nav {
+  display: block;
+}
+#desktop-nav {
+  display: none;
+}
+
+/* Switch to desktop after 768px */
+@media (min-width: 768px) {
+  #mobile-nav {
+    display: none;
+  }
+  #desktop-nav {
+    display: block;
+  }
+}

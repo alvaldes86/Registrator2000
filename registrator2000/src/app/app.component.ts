@@ -3,10 +3,11 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { RegistrationService } from './services/registration.service';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { DesktopNavbarComponent } from "./components/desktop-navbar/desktop-navbar.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, RouterLink, NavbarComponent],
+  imports: [RouterOutlet, CommonModule, NavbarComponent, DesktopNavbarComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
