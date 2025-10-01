@@ -1,10 +1,4 @@
 
-/* Navigation */
-
-ul{
-
-
-}
 ul, li{
   list-style-type: none;
 }
@@ -14,8 +8,13 @@ ul, li{
   bottom: 0;
   left: 0;
   z-index: 1000;
-  padding: 1.4rem 0 !important;
  }
+
+ @media all and (display-mode: standalone) {
+  nav {
+     padding: 1.4rem 0 !important;
+  }
+}
 
 .navbar-brand {
   font-size: 1.4rem;
@@ -31,10 +30,6 @@ ul, li{
   color: #666 !important;
   transition: color 0.3s ease;
   list-style: none ;
-}
-
-.nav-link:hover {
-  color: #333 !important;
 }
 
 /* Bottom Navigation */
@@ -63,17 +58,9 @@ ul, li{
   align-items: center;
 }
 
-.nav-link:hover {
+.active {
   color: #ffffff !important;
 }
-
-.nav-link a.active {
-  color: #ffffff !important;
-}
-
-/* .nav-link.active .nav-icon-wrapper {
-  color: #ff6b6b;
-} */
 
 .nav-icon-wrapper {
   margin-bottom: 0.25rem;
