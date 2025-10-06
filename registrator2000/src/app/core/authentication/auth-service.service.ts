@@ -25,4 +25,8 @@ export class AuthService {
   isLoggedIn(): boolean {
     return !!localStorage.getItem('token');
   }
+
+  triggerLogin() {
+    return this.http.get('https://simple-grocery-store-api.glitch.me/products');
+  }
 }

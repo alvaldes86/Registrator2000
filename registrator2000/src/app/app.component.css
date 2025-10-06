@@ -1,8 +1,12 @@
+
 /* Default = mobile */
 #mobile-nav {
   display: block;
 }
 #desktop-nav {
+  display: none;
+}
+#footer {
   display: none;
 }
 
@@ -12,6 +16,9 @@
     display: none;
   }
   #desktop-nav {
+    display: block;
+  }
+  #footer {
     display: block;
   }
 }

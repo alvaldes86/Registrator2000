@@ -1,9 +1,13 @@
  <div class="container">
       <div class="row justify-content-center mt-5">
         <div class="col-md-6 col-lg-5">
-          <div class="card shadow">
+          <div class="">
             <div class="card-body p-4">
-              <h2 class="card-title text-center mb-4">Welcome Back</h2>
+              <div class="mb-4">
+                <h2 class="card-title text-center">Welcome Back</h2>
+                <p class="text-muted">Select login option to continue</p>
+              </div>
+
 
               <!-- Social Login Buttons -->
               <div class="d-grid gap-2 mb-3">
@@ -20,7 +24,7 @@
                   Continue with Google
                 </button>
 
-                <button
+                <!-- <button
                   type="button"
                   class="btn btn-primary d-flex align-items-center justify-content-center"
                   (click)="loginWithFacebook()">
@@ -28,9 +32,9 @@
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                   </svg>
                   Continue with Facebook
-                </button>
+                </button> -->
 
-                <button
+                <!-- <button
                   type="button"
                   class="btn btn-dark d-flex align-items-center justify-content-center"
                   (click)="loginWithX()">
@@ -38,11 +42,11 @@
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                   </svg>
                   Continue with X
-                </button>
+                </button> -->
               </div>
 
               <!-- Divider -->
-              <div class="d-flex align-items-center my-4">
+              <div class="d-flex align-items-center my-5">
                 <hr class="flex-grow-1">
                 <span class="px-3 text-muted">or</span>
                 <hr class="flex-grow-1">
@@ -58,7 +62,7 @@
                     id="email"
                     [(ngModel)]="email"
                     name="email"
-                    placeholder="name@example.com"
+                    placeholder=""
                     required>
                 </div>
 
@@ -70,7 +74,7 @@
                     id="password"
                     [(ngModel)]="password"
                     name="password"
-                    placeholder="Enter your password"
+                    placeholder=""
                     required>
                 </div>
 
@@ -86,7 +90,7 @@
                   </label>
                 </div>
 
-                <div class="d-grid">
+                <div class="d-grid mt-4">
                   <button type="submit" class="btn btn-success">
                     Sign In
                   </button>

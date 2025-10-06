@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from '../../../core/authentication/auth-service.service';
 
 @Component({
   selector: 'app-user-login',
@@ -12,6 +13,7 @@ export class UserLoginComponent {
    email: string = '';
   password: string = '';
   rememberMe: boolean = false;
+  private authService = inject(AuthService);
 
   loginWithEmail() {
     console.log('Email login:', {
@@ -23,7 +25,11 @@ export class UserLoginComponent {
   }
 
   loginWithGoogle() {
-    console.log('Google login initiated');
+    this.authService.triggerLogin().subscribe({
+      next: () => {
+        console.log('Google login initiated');
+      }
+    });
     // Implement your Google OAuth logic here
   }
 

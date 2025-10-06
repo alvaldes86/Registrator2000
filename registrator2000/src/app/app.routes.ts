@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { UserLoginComponent } from './pages/user-login/user-login.component';
+import { BussinessDashboardComponent } from './features/business/pages/bussiness-dashboard.component';
+import { UserLoginComponent } from './features/auth/user-login/user-login.component';
 
 export const routes: Routes = [
-  { path: '', component: DashboardComponent, pathMatch: 'full' },
+  { path: '', component: BussinessDashboardComponent, pathMatch: 'full' },
   { path: 'account', component: UserLoginComponent }
 ];

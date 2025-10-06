@@ -1,13 +1,14 @@
 import { Component, inject } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
-import { RegistrationService } from './services/registration.service';
+import { RouterOutlet } from '@angular/router';
+import { RegistrationService } from './core/registration.service';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { DesktopNavbarComponent } from "./components/desktop-navbar/desktop-navbar.component";
+import { NavbarComponent } from "./shared/components/navbar/navbar.component";
+import { DesktopNavbarComponent } from "./shared/components/desktop-navbar/desktop-navbar.component";
+import { FooterComponent } from "./shared/components/footer/footer.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, NavbarComponent, DesktopNavbarComponent],
+  imports: [RouterOutlet, CommonModule, NavbarComponent, DesktopNavbarComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
